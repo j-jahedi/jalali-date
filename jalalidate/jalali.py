@@ -9,6 +9,13 @@ class Jalali:
         self.__gregorian_days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
         self.__jalali_days_in_month = [31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 29]
 
+    def str_to_jalali(str):
+        if '/' in str:
+            args = [int(x) for x in str.split('/')]
+        elif '-' in str:
+            args = [int(x) for x in str.split('-')]
+        return Jalali(args[0],args[1],args[2])
+
     def jalali_to_gregorian(self):
      
         year = self.year - 979
