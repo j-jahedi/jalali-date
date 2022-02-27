@@ -8,7 +8,8 @@ class Jalali:
         self.__day = day
         self.__gregorian_days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
         self.__jalali_days_in_month = [31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 29]
-
+        
+    @staticmethod
     def str_to_jalali(str):
         if '/' in str:
             args = [int(x) for x in str.split('/')]
