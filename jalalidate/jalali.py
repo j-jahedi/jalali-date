@@ -83,6 +83,10 @@ class Date(g_date):
         self.__gregorian_days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
         self.__jalali_days_in_month = [31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 29]
 
+    @staticmethod
+    def datetime_convert(datetime):
+        return Date(datetime.year, datetime.month, datetime.day)
+        
     def gregorian_to_jalali(self):
         year = self.year - 1600
         month = self.month - 1

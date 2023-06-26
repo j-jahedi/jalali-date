@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'jalalidate',
   packages = ['jalalidate'],
-  version = '0.1',
+  version = '0.1.3',
   license='MIT',
   description = 'change date between gregorian and jalali date',
   author = 'Javad Jahedi',
